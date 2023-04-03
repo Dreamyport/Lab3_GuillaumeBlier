@@ -18914,6 +18914,80 @@ Transform:
   m_Father: {fileID: 1210620778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1884500614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937413, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205826999937418, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205827080459043, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205827293923529, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_text
+      value: Niveau 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205827378203490, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_text
+      value: Le laboratoire secret
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205828733377133, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_text
+      value: "''Peu importe ce que B-V-J-J-B-V-B-V-B-R \xE9crit sur la console veut
+        dire, je suis dans de s\xE9rieux p\xE9pins.''\n                 -Cowboy Jack"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
 --- !u!1 &1885284930
 GameObject:
   m_ObjectHideFlags: 0
@@ -19267,6 +19341,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6307483817044951170, guid: 8635cd90d2baf0244881cb6a25815c37, type: 3}
   m_PrefabInstance: {fileID: 1575922544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1959379839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8891205826766228165, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+  m_PrefabInstance: {fileID: 1884500614}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1959881310
 PrefabInstance:
@@ -21487,6 +21566,10 @@ PrefabInstance:
       propertyPath: _onIce
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4329264399193378961, guid: bf293c25471c58a40a2cce35e3bf012b, type: 3}
+      propertyPath: _disabledAbility
+      value: 
+      objectReference: {fileID: 1959379839}
     - target: {fileID: 4329264399193378961, guid: bf293c25471c58a40a2cce35e3bf012b, type: 3}
       propertyPath: _copyStartLocation
       value: 

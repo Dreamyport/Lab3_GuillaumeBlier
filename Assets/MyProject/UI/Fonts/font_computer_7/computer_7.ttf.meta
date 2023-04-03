@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef5dce9a4710631458af4d956d116cfe
+guid: f402b904c464cef4d99bdb7407c057d5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,11 +9,8 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Technology
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: ce58bcc9751bcf0429e754c5faf6bd02, type: 3}
-  - {fileID: 12800000, guid: a9ea2e257c278cd4fbd9b4855ba287b5, type: 3}
-  - {fileID: 12800000, guid: 2694bbf9507c3334dbcd76c9d67cba55, type: 3}
+  - Computer 7
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private GameObject _copy;
     [SerializeField] private Transform _copyStartLocation;
+    [SerializeField] private GameObject _disabledAbility;
 
     [SerializeField] private bool _onIce = false;
 
@@ -88,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
         _copy.transform.position = transform.position;
         _copy.transform.rotation = transform.rotation;
         _madeCopy = true;
+
+        _disabledAbility.SetActive(true);
     }
 
     // On remet la copie en dessous du terrain pour créer l'illusion de destruction.
@@ -95,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _copy.transform.position = _copyStartLocation.position;
         _madeCopy = false;
+
+        _disabledAbility.SetActive(false);
     }
 
     /* ---------------------

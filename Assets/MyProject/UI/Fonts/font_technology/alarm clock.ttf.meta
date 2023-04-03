@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2694bbf9507c3334dbcd76c9d67cba55
+guid: b1b91d8e3549a4f4aa2108d2725844ba
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Technology
+  - alarm clock
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
