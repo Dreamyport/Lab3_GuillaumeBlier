@@ -5,14 +5,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    private string[] _captureDialogs = { "Ouch!", "Cette capture ne compte pas.", "Je vais m'en rappeller.", "Ayoye!", "On doit continuer, partenaire.", "****!", "On ne m'appelle pas Cowboy Jack pour rien!"};
-    private int _captureIndex = 0;
-    private int _maxCaptureIndex = 5;
-
     [Header("References")]
     [SerializeField] private TMP_Text _capturedTxt = default;
     [SerializeField] private TMP_Text _diamondsTxt = default;
-    [SerializeField] private TMP_Text _dialogTxt = default;
     [SerializeField] private TMP_Text _timeTxt = default;
     [SerializeField] private GameObject _pauseMenu = default;
     [SerializeField] private GameObject _restMenu = default;
@@ -49,11 +44,6 @@ public class UIManager : MonoBehaviour
     public void ChangeObstacles(float obstacles)
     {
         _capturedTxt.text = "Capturé(s): " + obstacles.ToString();
-        _dialogTxt.text = _captureDialogs[_captureIndex];
-
-        _captureIndex++;
-        if (_captureIndex > _maxCaptureIndex)
-            _captureIndex = 0;
     }
 
     public void ChangeDiamonds(float diamonds)
