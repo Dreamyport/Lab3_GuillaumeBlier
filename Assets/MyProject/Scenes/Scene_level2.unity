@@ -9751,8 +9751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8891205828733377133, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
       propertyPath: m_text
-      value: "''Tu ne trouveras jamais la cl\xE9 qui m\xE8ne au portail!''\n            
-        -Gardien Viking #3"
+      value: "\"Les cl\xE9s ouvrent les portes avec les signes de cl\xE9.\""
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
@@ -14432,7 +14431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be6ea498fea6414795893cceca9b0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextObjective: Cette plaque doit surement activer quelque chose.
+  _nextObjective: Un passage s'est ouvert.
   _objectiveTxt: {fileID: 853216607}
 --- !u!65 &1126768854
 BoxCollider:
@@ -14445,8 +14444,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42.4262, y: 10.057888, z: 3.3443422}
-  m_Center: {x: 0.81903076, y: -0.8187828, z: 0.4351449}
+  m_Size: {x: 2.241929, y: 10.057888, z: 3.3443422}
+  m_Center: {x: -0.96897554, y: -0.8187828, z: 0.4351449}
 --- !u!1 &1135019658
 GameObject:
   m_ObjectHideFlags: 0

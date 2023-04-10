@@ -5029,7 +5029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197374556}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -49.000843, y: 20.929468, z: 38.7405}
+  m_LocalPosition: {x: -49.000843, y: 20.929466, z: -50.35952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12176,7 +12176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be6ea498fea6414795893cceca9b0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextObjective: Jack Crawford ne restera pas pris dans ce labyrinthe!
+  _nextObjective: Il faut sortir de ce labyrinthe!
   _objectiveTxt: {fileID: 729017658}
 --- !u!65 &441034301
 BoxCollider:
@@ -19209,6 +19209,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+--- !u!1 &698644117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698644118}
+  - component: {fileID: 698644120}
+  - component: {fileID: 698644119}
+  m_Layer: 0
+  m_Name: 'Objective5 '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698644118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698644117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.9, y: 54.59, z: 89.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 788071553}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698644119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698644117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be6ea498fea6414795893cceca9b0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextObjective: Un passage s'est ouvert.
+  _objectiveTxt: {fileID: 729017658}
+--- !u!65 &698644120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698644117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3000937, y: 6.450076, z: 2.3328972}
+  m_Center: {x: -16.29229, y: -0.33860397, z: -0.88723564}
 --- !u!4 &699219460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4661435515762813124, guid: e289bf5debb17f6459818c207d781953, type: 3}
@@ -21607,6 +21667,7 @@ Transform:
   - {fileID: 441034299}
   - {fileID: 785436051}
   - {fileID: 1838053417}
+  - {fileID: 698644118}
   - {fileID: 2140197008}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -26909,7 +26970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -49.000843, y: 20.929468, z: 38.7405}
+  m_LocalPosition: {x: -49.000843, y: 20.929466, z: -50.35952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58461,7 +58522,7 @@ GameObject:
   - component: {fileID: 2140197010}
   - component: {fileID: 2140197009}
   m_Layer: 0
-  m_Name: Objective5
+  m_Name: Objective6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58480,7 +58541,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 788071553}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2140197009
 MonoBehaviour:
@@ -59064,7 +59125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4329264399193378963, guid: bf293c25471c58a40a2cce35e3bf012b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33
+      value: -56.1
       objectReference: {fileID: 0}
     - target: {fileID: 4329264399193378963, guid: bf293c25471c58a40a2cce35e3bf012b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -59289,6 +59350,10 @@ PrefabInstance:
     - target: {fileID: 8891205827378203490, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
       propertyPath: m_text
       value: "La for\xEAt des Gardiens"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891205828733377133, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
+      propertyPath: m_text
+      value: '''''Les plaques de pression ouvre certains passages.'''''
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd972cf17b061e4b8bac5e816ba7675, type: 3}
