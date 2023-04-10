@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    /* ---------------------
+     * Attributs:
+     * ---------------------
+     */
     [Header("References")]
     [SerializeField] private TMP_Text _capturedTxt = default;
     [SerializeField] private TMP_Text _diamondsTxt = default;
@@ -12,29 +17,47 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu = default;
     [SerializeField] private GameObject _restMenu = default;
 
-    private bool _paused;
+    private bool _paused = false;
+    private bool _started = false;
 
     private LevelManager _levelManager;
 
-    void Start()
+    /* ---------------------
+     * Méthodes privées:
+     * ---------------------
+     */
+    private void Start()
     {
+        // On affiche les valeurs vident.
         _levelManager = FindObjectOfType<LevelManager>();
+
+        // On affiche le temps initial, seulement si c'est le deuxième niveau.
+        if(SceneManager.GetActiveScene().buildIndex > 1)
+            GetTime();
         _capturedTxt.text = "Capturé(s): " + _levelManager.GetObstacles();
         _diamondsTxt.text = "Diamant(s): " + _levelManager.GetDiamonds();
         Time.timeScale = 1;
-        _paused = false;
     }
-
 
     private void Update()
     {
-        float time = Time.time - _levelManager.GetStartTime();
-        _timeTxt.text = time.ToString("f2");
+        // Active l'affichage du temps, seulement si le niveau est commencé.
+        if (_started)
+            GetTime();
+
         PauseManager();
+    }
+
+    private void GetTime() 
+    {
+        // Temps réel va être égale au temps présent - le temps de départ - le temps d'inactivité du joueur en début de chaque niveau.
+        float time = (Time.time - _levelManager.GetStartTime() - _levelManager.GetDownTime());
+        _timeTxt.text = time.ToString("f2");
     }
 
     private void PauseManager()
     {
+        // Gestion des pauses.
         if (Input.GetKeyDown(KeyCode.Escape) && !_paused)
             Pause();
         else if (Input.GetKeyDown(KeyCode.Escape) && _paused)
@@ -64,5 +87,10 @@ public class UIManager : MonoBehaviour
         _restMenu.SetActive(true);
         Time.timeScale = 1;
         _paused = false;
+    }
+
+    public void SetStarted()
+    {
+        _started = true;
     }
 }

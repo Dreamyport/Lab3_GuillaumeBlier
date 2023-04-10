@@ -7,7 +7,7 @@ public class EndGame : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-       // À chaque niveau, on met à jour les statistiques du joueur et on change de scène.
+       // Gestion de la fin d'un niveau.
         if (other.gameObject.tag == "Player")
         {
             int indexScene = SceneManager.GetActiveScene().buildIndex;

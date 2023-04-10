@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class UIEndgame : MonoBehaviour
 {
+    /* ---------------------
+     * Attributs:
+     * ---------------------
+     */
+    private LevelManager _levelManager;
+
     [Header("References")]
     [SerializeField] private TMP_Text _timeTxt = default;
     [SerializeField] private TMP_Text _totalTimeTxt = default;
@@ -15,71 +21,68 @@ public class UIEndgame : MonoBehaviour
     [SerializeField] private GameObject[] _featsYeeHaw = default;
     [SerializeField] private GameObject[] _featsDiamonds = default;
 
-    private LevelManager _levelManager;
-
+    /* ---------------------
+     * Méthodes privées:
+     * ---------------------
+     */
     private void Start()
     {
+        // On va chercher et on affiche les informations sur les statistiques.
         _levelManager = FindObjectOfType<LevelManager>();
 
         _timeTxt.text = "Temps: " + _levelManager.GetEndTime().ToString("f2") + "s";
         _capturesTxt.text = "Nombre de captures: " + _levelManager.GetObstacles().ToString();
         _diamondsTxt.text = "Nombre de diamants collectés: " + _levelManager.GetDiamonds().ToString();  
 
+        // On applique les pénalités.
         float totalTime = (_levelManager.GetEndTime() - _levelManager.GetDiamonds()) + (_levelManager.GetObstacles() * 5.0f);
         _totalTimeTxt.text = "Temps total: " + totalTime.ToString("f2") + "s";
 
-        TimeFeat();
-        CapturesFeat();
-        DiamondsFeat();
+        // Les accomplissements du joueur, au courant de la partie. (S'il y a lieu)
+        FeatManager();
 
+        // Gestion de la cote finale (avec pénalités).
         RatingManager(totalTime);
     }
 
-    private void TimeFeat() 
+    // Gestion du différent nombre d'accomplissements.
+    private void FeatManager() 
     {
-        float time = _levelManager.GetEndTime();
         float[] times = { 120.0f, 180.0f, 300.0f, 420.0f };
-
-        for(int i = 0; i < _featsTwoMin.Length; i++) 
-        {
-            if (time <= times[i])
-            {
-                _featsTwoMin[i].SetActive(true);
-                break;
-            }
-        }
-    }
-
-    private void CapturesFeat()
-    {
-        float capture = _levelManager.GetObstacles();
         float[] captures = { 0.0f, 5.0f, 10.0f, 30.0f };
-
-        for (int i = 0; i < _featsYeeHaw.Length; i++)
-        {
-            if (capture <= captures[i])
-            {
-                _featsYeeHaw[i].SetActive(true);
-                break;
-            }
-        }
-    }
-
-    private void DiamondsFeat()
-    {
-        float diamond = _levelManager.GetDiamonds();
         float[] diamonds = { 144.0f, 75.0f, 50.0f, 25.0f };
 
-        for (int i = 0; i < _featsDiamonds.Length; i++)
+        Feat(_levelManager.GetEndTime(), _featsTwoMin, times, false);
+        Feat(_levelManager.GetObstacles(), _featsYeeHaw, captures, false);
+        Feat(_levelManager.GetDiamonds(), _featsDiamonds, diamonds, true);
+    }
+
+    // Fait le tour des quatre limites (diamant, or, argent et bronze).
+    private void Feat(float nFeat, GameObject[] feat, float[] featLimits, bool diamondFeat) 
+    {
+        for (int i = 0; i < 5; i++)
         {
-            if (diamond >= diamonds[i])
+            // Si le joueur a atteint une certaine limite, on sort de la boucle et on active la médail reliée.
+            if (!diamondFeat)
             {
-                _featsDiamonds[i].SetActive(true);
-                break;
+                if (nFeat <= featLimits[i])
+                {
+                    feat[i].SetActive(true);
+                    break;
+                }
+            }
+            else 
+            {
+                if (nFeat >= featLimits[i])
+                {
+                    feat[i].SetActive(true);
+                    break;
+                }
             }
         }
     }
 
+    // Même principle que la gestion des limites pour les accomplissments, mais donner une cote au temps totale.
     private void RatingManager(float totalTime) 
     {
         float time = 120.0f;

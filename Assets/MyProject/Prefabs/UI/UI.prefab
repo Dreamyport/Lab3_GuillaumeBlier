@@ -871,7 +871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _capturedTxt: {fileID: 8891205827888438237}
   _diamondsTxt: {fileID: 8891205827340681101}
-  _dialogTxt: {fileID: 7042596782377614264}
   _timeTxt: {fileID: 8891205828365538084}
   _pauseMenu: {fileID: 8891205827080459043}
   _restMenu: {fileID: 8891205827188597252}
@@ -2985,7 +2984,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '999.59 '
+  m_text: 0.00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b0cee21b1ecd484d899537aebaaacba, type: 2}
   m_sharedMaterial: {fileID: -3255169130190390845, guid: 5b0cee21b1ecd484d899537aebaaacba, type: 2}

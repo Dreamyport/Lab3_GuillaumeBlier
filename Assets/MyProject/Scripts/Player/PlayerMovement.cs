@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
      * Attributs:
      * ---------------------
      */
+    private float _startDownTime = 0.0f;
     private bool _madeCopy = false;
+    private bool _startLevel = false;
 
     [Header("References")]
     [SerializeField] private Rigidbody _rb;
@@ -28,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
      * Méthodes privées:
      * ---------------------
      */
+    private void Start()
+    {
+        _startDownTime = Time.time;
+    }
     private void Update() 
     {
         // Gestion de la copie.
@@ -46,6 +52,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 direction = GetDirection();
 
+        if (direction != Vector3.zero && !_startLevel)
+            StartGame();
+
         // On regarde si le joueur court.
         if (Input.GetKey(KeyCode.LeftShift))
             PushPlayer(direction, _sprintSpeed);
@@ -60,6 +69,20 @@ public class PlayerMovement : MonoBehaviour
         float zPos = Input.GetAxis("Vertical");
 
         return new Vector3(xPos, 0f, zPos);
+    }
+
+    // On lance la partie.
+    private void StartGame() 
+    {
+        _startLevel = true;
+
+        // On lance en paramêtre, le temps que le joueur ne bouge pas.
+        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        levelManager.SetDownTime(Time.time - _startDownTime);
+
+        // On active le chronomètre sur l'interface. 
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        uiManager.SetStarted();
     }
 
     private void PushPlayer(Vector3 direction, float speed)
@@ -106,16 +129,9 @@ public class PlayerMovement : MonoBehaviour
      * Méthodes publiques:
      * ---------------------
      */
-
     // Pour savoir si le joueur à fait une copie.
     public bool GetMadeCopy() 
     {
         return _madeCopy;
-    }
-
-    // Partie terminé, on désactive le joueur.
-    public void GameOver()
-    {
-        this.gameObject.SetActive(false);
     }
 }

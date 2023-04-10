@@ -5029,7 +5029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197374556}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -49.000843, y: 20.929466, z: -50.159523}
+  m_LocalPosition: {x: -49.000843, y: 20.929468, z: 38.7405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26909,7 +26909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -49.000843, y: 20.929466, z: -50.159523}
+  m_LocalPosition: {x: -49.000843, y: 20.929468, z: 38.7405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50019,7 +50019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextObjective: "La sortie est bloqu\xE9e. Ce ch\xE2teau renferme peut-\xEAtre
-    la cl\xE9!"
+    la solution!"
   _objectiveTxt: {fileID: 729017658}
 --- !u!65 &1838053419
 BoxCollider:
@@ -59064,7 +59064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4329264399193378963, guid: bf293c25471c58a40a2cce35e3bf012b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -55.9
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4329264399193378963, guid: bf293c25471c58a40a2cce35e3bf012b, type: 3}
       propertyPath: m_LocalRotation.w
